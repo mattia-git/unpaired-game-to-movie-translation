@@ -7,7 +7,8 @@ The task was to train a deep-learning model that could perform unpaired image-to
 ## A summary of the appraoch
 
 1. Dataset extraction
-    - We scan over the videos with YOLO to detect and save human patches. Then, we use OpenCV to extract SIFT features and remove similar images using a lookup-buffer and FLANN matching.
+    - At the start, what we have are unlabelled videos of American gangster media (the Godfather, Sopranos) and the 'Mafia' videogame.
+    - We scan over these videos with YOLO to detect and save human patches. Then, we use OpenCV to extract SIFT features and remove similar images using a lookup-buffer and FLANN matching.
     - We classify the human patches into various "poses" by extracting features uses MTCNN face-matching and YOLO pose estimation. These labels will be used to aid the training of our generator.
     - We perform some post-processing and dataset filtering 
 
